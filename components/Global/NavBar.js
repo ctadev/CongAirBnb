@@ -45,7 +45,7 @@ function NavBar() {
   return (
     <nav className={s.navbar}>
       <main className={s.main}>
-        <section className={s.left} onClick={() => router.push('/')}>
+        <section className={s.left} onClick={() => router.push("/")}>
           <Image
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Airbnb_Logo_B%C3%A9lo.svg/2560px-Airbnb_Logo_B%C3%A9lo.svg.png"
             layout="fill"
@@ -54,26 +54,30 @@ function NavBar() {
           />
         </section>
 
-        <section className={s.middle}>
-          <input
-            type="text"
-            placeholder="Start your search"
-            onChange={(e) => setSearchInput(e.target.value)}
-            value={searchInput}
-          />
-          <div className={s.searchContainer}>
-            <SearchIcon />
-          </div>
-        </section>
+        <div className={s.sides}>
+          <section className={s.middle}>
+            <input
+              type="text"
+              placeholder="Start your search"
+              onChange={(e) => setSearchInput(e.target.value)}
+              value={searchInput}
+            />
+            <div className={s.searchContainer}>
+              <SearchIcon />
+            </div>
+          </section>
 
-        <section className={s.right}>
-          <p>Become a host</p>
-          <LanguageIcon />
-          <div className={s.menuContainer}>
-            <MenuIcon />
-            <AccountCircleIcon />
-          </div>
-        </section>
+          <section className={s.right}>
+            <div className={s.host}>
+              <p>Become a host</p>
+              <LanguageIcon />
+            </div>
+            <div className={s.menuContainer}>
+              <MenuIcon />
+              <AccountCircleIcon />
+            </div>
+          </section>
+        </div>
       </main>
 
       {searchInput && (

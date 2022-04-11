@@ -10,62 +10,78 @@
   z-index: 2;
   .main {
     @include rowCenter;
-    justify-content: space-around;
     .left {
       height: 40px;
       width: 100px;
       position: relative;
+      flex-grow: 0.5;
       cursor: pointer;
-    }
-
-    .middle {
-      @include rowCenter;
-      width: 30%;
-      max-width: 600px;
-      border-radius: 25px;
-      padding: 5px 5px;
-      border: 1px solid grey;
       @include tablet {
-        border: none;
-      }
-      @include mobile {
-        display: none;
-      }
-      input {
-        flex-grow: 1;
-        border-radius: 25px;
-        background: transparent;
-        border: none;
-        outline: none;
-        padding: 0 10px;
-      }
-      .searchContainer {
-        border-radius: 50%;
-        background-color: rgb(252, 129, 129);
-        width: 30px;
-        height: 100%;
-        @include rowCenter;
-        padding: 2px;
-        @include tablet {
-          display: none;
-        }
+        height: 30px;
+        width: 75px;
       }
     }
 
-    .right {
+    .sides {
       @include rowCenter;
-      gap: 1rem;
-      p {
+      justify-content: space-around;
+      flex-grow: 1;
+      @include tablet{
+        justify-content: flex-end;
+      }
+      .middle {
+        @include rowCenter;
+        width: 45%;
+        max-width: 600px;
+        border-radius: 25px;
+        padding: 5px 5px;
+        border: 1px solid grey;
         @include tablet {
-          display: none;
+          border: none;
+        }
+        input {
+          flex-grow: 1;
+          border-radius: 25px;
+          background: transparent;
+          border: none;
+          outline: none;
+          padding: 0 10px;
+        }
+        .searchContainer {
+          border-radius: 50%;
+          background-color: rgb(252, 129, 129);
+          width: 30px;
+          height: 100%;
+          @include rowCenter;
+          padding: 2px;
+          @include tablet {
+            display: none;
+          }
         }
       }
-      .menuContainer {
+
+      .right {
         @include rowCenter;
-        border-radius: 25px;
-        border: 1px solid grey;
-        padding: 5px;
-        gap: 0.5rem;
+        gap: 1rem;
+        .host {
+          @include rowCenter;
+          gap: 1rem;
+          @include desktop {
+            display: none;
+          }
+          p {
+            @include tablet {
+              display: none;
+            }
+          }
+        }
+        .menuContainer {
+          @include rowCenter;
+          border-radius: 25px;
+          border: 1px solid grey;
+          padding: 5px;
+          gap: 0.5rem;
+        }
       }
     }
   }
@@ -98,9 +114,9 @@
       justify-content: space-between;
       margin-top: 1rem;
       gap: 8rem;
-      p{
+      p {
         cursor: pointer;
-        &:hover{
+        &:hover {
           color: palevioletred;
         }
       }
