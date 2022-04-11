@@ -1,0 +1,17 @@
+@import "../Global/global.scss";
+
+.main {
+  @include rowCenter;
+  .content {
+    padding: 2rem 1rem;
+    .resultContent {
+      display: flex;
+      .maps {
+        min-width: 500px;
+        @include desktop {
+          display: none;
+        }
+      }
+    }
+  }
+}

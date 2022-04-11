@@ -1,0 +1,109 @@
+@import "./global.scss";
+
+.navbar {
+  background-color: white;
+  box-shadow: 0 0 5px 2px grey;
+  padding: 20px 10px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  .main {
+    @include rowCenter;
+    justify-content: space-around;
+    .left {
+      height: 40px;
+      width: 100px;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .middle {
+      @include rowCenter;
+      width: 30%;
+      max-width: 600px;
+      border-radius: 25px;
+      padding: 5px 5px;
+      border: 1px solid grey;
+      @include tablet {
+        border: none;
+      }
+      @include mobile {
+        display: none;
+      }
+      input {
+        flex-grow: 1;
+        border-radius: 25px;
+        background: transparent;
+        border: none;
+        outline: none;
+        padding: 0 10px;
+      }
+      .searchContainer {
+        border-radius: 50%;
+        background-color: rgb(252, 129, 129);
+        width: 30px;
+        height: 100%;
+        @include rowCenter;
+        padding: 2px;
+        @include tablet {
+          display: none;
+        }
+      }
+    }
+
+    .right {
+      @include rowCenter;
+      gap: 1rem;
+      p {
+        @include tablet {
+          display: none;
+        }
+      }
+      .menuContainer {
+        @include rowCenter;
+        border-radius: 25px;
+        border: 1px solid grey;
+        padding: 5px;
+        gap: 0.5rem;
+      }
+    }
+  }
+  .main2 {
+    @include columnCenter;
+    margin-top: 2rem;
+    .guess {
+      @include rowCenter;
+      justify-content: space-between;
+      gap: 5rem;
+      border-bottom: 1px solid grey;
+      @include tablet {
+        gap: 2rem;
+      }
+      .icons {
+        @include rowCenter;
+        gap: 0.5rem;
+        input {
+          width: 2.5rem;
+        }
+      }
+    }
+    .calendar {
+      @include tablet {
+        @include columnCenter;
+      }
+    }
+    .buttons {
+      @include rowCenter;
+      justify-content: space-between;
+      margin-top: 1rem;
+      gap: 8rem;
+      p{
+        cursor: pointer;
+        &:hover{
+          color: palevioletred;
+        }
+      }
+    }
+  }
+}

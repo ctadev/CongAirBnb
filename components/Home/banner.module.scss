@@ -1,0 +1,51 @@
+@import "../Global/global.scss";
+
+.banner {
+  position: relative;
+  height: 700px;
+  margin-top: 5px;
+  @include rowCenter;
+  @include desktop {
+    height: 600px;
+  }
+  @include tablet {
+    height: 400px;
+  }
+  @include mobile {
+    height: 300px;
+  }
+  .text {
+    position: absolute;
+    @include columnCenter;
+    p {
+      font-size: 1.5rem;
+      @include mobile {
+        font-size: 1rem;
+      }
+    }
+    button {
+      border-radius: 25px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      margin-top:1rem;
+      background-color: white;
+      border: none;
+      box-shadow: 0 0 5px 5px grey;
+      color: rgb(41, 76, 231);
+      font-weight: bolder;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      @include mobile {
+        padding: 5px 10px;
+        font-size: 0.8rem;
+        box-shadow: 0 0 2px 2px grey;
+      }
+      &:hover {
+        transform: scale(1.2);
+      }
+      &:active{
+          color: aqua;
+      }
+    }
+  }
+}

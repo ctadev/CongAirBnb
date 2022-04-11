@@ -1,0 +1,32 @@
+@import "./global.scss";
+
+.footer {
+  @include rowCenter;
+  gap: 7rem;
+  margin-top: 2rem;
+  background-color: rgb(231, 231, 231);
+  margin-left: auto;
+  margin-right: auto;
+  @include desktop {
+    gap: 3rem;
+  }
+  @include tablet {
+    gap: 1rem;
+  }
+  section {
+    padding: 30px 10px;
+    h3 {
+      font-size: 0.8rem;
+    }
+    p {
+      margin: 10px 0;
+      font-size: 0.7rem;
+      cursor: pointer;
+    }
+  }
+  .com,.host {
+    @include tablet {
+      display: none;
+    }
+  }
+}

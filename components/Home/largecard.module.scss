@@ -1,0 +1,15 @@
+@import "../Global/global.scss";
+
+.large {
+  position: relative;
+  height: 350px;
+  margin-top: 2rem;
+  .photo {
+    border-radius: 10px;
+  }
+  .text {
+    position: absolute;
+    top: 5rem;
+    left: 2rem;
+  }
+}

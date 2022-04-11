@@ -1,0 +1,21 @@
+@import "../Global/global.scss";
+
+.live {
+  margin-top: 2rem;
+  .cardsContainer {
+    margin-top: 1rem;
+    @include rowCenter;
+    gap: 1rem;
+    padding: 1rem;
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overscroll-behavior-inline: contain;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    @include desktop{
+      justify-content: flex-start;
+    }
+  }
+}
